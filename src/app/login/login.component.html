@@ -1,0 +1,34 @@
+<div class="login">
+    <div class="container">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login__form">
+                    <img src="https://zukk.com.br/wp-content/uploads/2020/09/logo_quadrado.png" alt="Logo">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Insira seu usuário</mat-label>
+                        <input type="text" matInput placeholder="Ex. admin" formControlName="username">
+                        <mat-error *ngIf="submitted && f.username.errors">
+                            <div *ngIf="f.username.errors?.required">Usuário obrigatório</div>
+                        </mat-error>
+                      </mat-form-field>
+                      <mat-form-field appearance="fill">
+                          <mat-label>Insira sua senha</mat-label>
+                          <input primary formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+                          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <i class="material-icons">{{hide ? 'visibility_off' : 'visibility'}}</i>
+                          </button>
+                          <mat-error *ngIf="submitted && f.password.errors">
+                            <div *ngIf="f.password.errors.required">Senha obrigatória</div>
+                          </mat-error>
+                        </mat-form-field>
+                    <div>
+                        <button mat-raised-button>Login</button>
+                    </div>
+                    <div *ngIf="error" class="invalid">{{error}}</div>
+                </form>
+    </div>
+</div>
+
+
+
+
+
+

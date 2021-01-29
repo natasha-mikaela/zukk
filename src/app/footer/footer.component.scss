@@ -1,0 +1,44 @@
+.footer {
+  bottom: 0;
+  width: 100%;
+
+  .footer__nav {
+    background-image: url("https://zukk.com.br/wp-content/uploads/2016/11/avada-it-call-to-action-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+    a {
+      color: #fff;
+    }
+
+    .logo__image {
+      width: 80px;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+}
+
+a {
+  margin-left: 5px;
+}
+
+.credits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #e9e8e8;
+  color: #788b98;
+  font-size: 12px;
+
+  a {
+    color: #788b98;
+  }
+}

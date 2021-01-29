@@ -1,0 +1,71 @@
+<div class="container app-clients">
+    <div class="table__title">
+            <div class="">
+                <h2>Lista de Clientes</h2>
+            </div>
+            <div class="btn__add">
+                <a (click)="addNew()" mat-raised-button><i class="material-icons">add_box</i> 
+                    <span>Adicionar</span>
+                </a>
+            </div>
+    </div>
+    <mat-form-field class="search">
+        <mat-label>Buscar</mat-label>
+        <input matInput [(ngModel)]="search"
+        placeholder="Pesquise por Nome, Endereço, Bairro, Cidade, Uf, Telefone ou E-mail" #input>
+    </mat-form-field>
+    <div class="content">
+        <table mdbTableScroll scrollX="true" maxWidth="400" class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Bairro</th>
+                    <th>Cidade</th>
+                    <th>UF</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let client of clients  | tableFilter:search; let i = index">
+                    <td>
+                        {{client.nome}}
+                    </td>
+                    <td>
+                        {{client.email}}
+                    </td>
+                    <td>
+                        {{client.telefone}}
+                    </td>
+                    <td>
+                        {{client.endereco}}
+                    </td>
+                    <td>
+                        {{client.bairro}}
+                    </td>
+                    <td>
+                        {{client.cidade}}
+                    </td>
+                    <td>
+                        {{client.uf}}
+                    </td>
+                    <td>
+                        <a (click)="updateItem
+                        (i, client.id, client.nome, client.email, client.telefone, client.endereco, client.bairro, client.cidade, client.uf)" 
+                        class="edit" data-toggle="modal" >
+                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                        </a>
+                        <a class="delete" data-toggle="modal" (click)="deleteItem(i, client.id, client.nome, client.email, client.telefone)">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+

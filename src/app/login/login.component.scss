@@ -1,0 +1,59 @@
+.login {
+  background-image: url("https://zukk.com.br/wp-content/uploads/2016/11/avada-it-call-to-action-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    margin: 25px;
+
+    mat-form-field {
+      width: 100%;
+    }
+
+    img {
+      margin-bottom: 30px;
+    }
+
+    button {
+      margin-top: 15px;
+    }
+  }
+
+  .mat-error {
+    color: #3f51b5 !important;
+  }
+
+  ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: #3f51b5 !important;
+  }
+
+  ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-ripple,
+  .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
+    background-color: #3f51b5 !important;
+  }
+
+  ::ng-deep .mat-form-field-invalid .mat-input-element,
+  .mat-warn .mat-input-element {
+    caret-color: #3f51b5;
+  }
+
+  .invalid {
+    margin-top: 30px;
+    color: #3f51b5;
+    background-color: #00000014;
+    padding: 15px;
+    border-radius: 4px;
+  }
+}

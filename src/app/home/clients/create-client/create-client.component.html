@@ -1,0 +1,43 @@
+<div class="container">
+    <h3 mat-dialog-title>Adicionar novo cliente</h3>
+
+    <form [formGroup]='userFormGroup' class="form__client" #form="ngForm" (ngSubmit)='addUser()' novalidate ng-controller="CepController as cep">
+        <mat-form-field appearance="fill">
+            <mat-label>Nome completo</mat-label>
+            <input type="name" formControlName='nome' [(ngModel)]="nome" matInput placeholder="João da Silva" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" formControlName='email' [(ngModel)]="email" matInput placeholder="pat@example.com" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Telephone</mat-label>
+            <input type="tel" formControlName='telefone' [(ngModel)]="tel" matInput placeholder="(11) 3168-4356" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>CEP</mat-label>
+            <input (blur)="consultaCEP($event.target.value)"  ng-model="cep.cep" type="cep" matInput placeholder="12333232">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Endereço</mat-label>
+            <input type="endereco" formControlName='endereco' matInput value="{{ cepResult.logradouro }}">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Bairro</mat-label> 
+            <input type="bairro" formControlName='bairro' matInput value="{{ cepResult.bairro }}">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Cidade</mat-label>
+            <input type="cidade" formControlName='cidade' matInput value="{{ cepResult.localidade }}">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>UF</mat-label>
+            <input type="uf" formControlName='uf' matInput required value="{{ cepResult.uf }}">
+        </mat-form-field>
+    </form>
+
+    <div class="buttons__forms" mat-dialog-actions>
+        <button mat-raised-button class="btn__positive" [disabled]="!nome || !email || !tel" (click)="addUser()" [mat-dialog-close]="1">Adicionar</button>
+        <button mat-raised-button (click)="onNoClick()" tabindex="-1">Cancelar</button>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+
+<div class="container">
+  <h3 mat-dialog-title>Alterar dados <span>{{ data.nome }}</span></h3>
+
+  <form  [formGroup]='clientFormGroup' class="form__client" #form="ngForm" (ngSubmit)='addUser()' novalidate ng-controller="CepController as cep">
+    <mat-form-field appearance="fill">
+        <mat-label>Nome completo</mat-label>
+        <input type="name" formControlName='nome' value='{{data.nome}}'  matInput placeholder="João da Silva" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" formControlName='email' matInput placeholder="pat@example.com" required value="{{ data.email }}">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input type="tel" formControlName='telefone' 
+        matInput placeholder="(11) 3168-4356" mask="(00) 0000-0000" required value="{{ data.telefone }}">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>CEP</mat-label>
+        <input (blur)="consultaCEP($event.target.value)"  ng-model="cep.cep" type="cep" 
+        matInput placeholder="12333232" mask="121232-890">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Endereço</mat-label>
+        <input type="endereco" formControlName='endereco' matInput required value="{{ data.endereco }}">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Bairro</mat-label> 
+        <input type="bairro" formControlName='bairro' matInput required value="{{ data.bairro }}">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Cidade</mat-label>
+        <input type="cidade" formControlName='cidade' matInput required value="{{ data.cidade }}">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>UF</mat-label>
+        <input type="uf" formControlName='uf' matInput required value="{{ data.uf }}">
+    </mat-form-field>
+</form>
+
+<div class="buttons__forms" mat-dialog-actions>
+    <button mat-raised-button class="btn__positive" [mat-dialog-close]="1" (click)="updateClient()">Alterar</button>
+    <button mat-raised-button (click)="onNoClick()" tabindex="-1">Cancelar</button>
+</div>
+</div>
