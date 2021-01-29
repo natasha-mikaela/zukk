@@ -19,7 +19,8 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o Projeto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![zukkPrint](https://user-images.githubusercontent.com/51464496/106229645-08f8a600-61ff-11eb-8c79-54417d509da5.jpg)
+
 
 
 * Tela de login com autenticação JWT - usuário/senha padrão ( admin / 1234 ) para fazer o login
@@ -32,7 +33,7 @@
 
 <!-- GETTING STARTED -->
 ### Pre requisites
- Clone the repo
+ Clone do repositorio
    ```sh
    git clone https://github.com/natasha-mikaela/zukk.git
    ```
