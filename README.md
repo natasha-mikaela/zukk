@@ -1,27 +1,49 @@
-# Zukk
+ <!--
+ * Projeto: Zukk
+ * Data: 28/01/2021
+ * Autora: Natasha Mikaela
+ -->
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h3 align="center">Zukk - Clients</h3>
 
-## Development server
+  <p align="center">
+    Crud Angular
+    <br />
+  </p>
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<!-- ABOUT THE PROJECT -->
+## Sobre o Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Tela de login com autenticação JWT - usuário/senha padrão ( admin / 1234 ) para fazer o login
+* Navegação entre as rotas deve ser validada com o token, caso não seja um token válido/expirado redirecionar para login
+* Feito login, criar uma página que liste os clientes cadastrados 
+* Formulário simples (nome, endereço, bairro, cidade, uf, telefone, e-mail) 
+* Consumir um serviço REST de CEP e preencher os campos automaticamente (https://viacep.com.br/ws/12235440/json/)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+<!-- GETTING STARTED -->
+### Pre requisites
+ Clone the repo
+   ```sh
+   git clone https://github.com/natasha-mikaela/zukk.git
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* npm
+  ```sh
+  npm install 
+  ```
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<!-- CONTACT -->
+## Contato
+
+Natasha Mikaela - natasha2803mikaela@gmail.com - https://www.linkedin.com/in/natasha-mikaela/
