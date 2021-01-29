@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
-import { ClientFetch } from "src/app/helpers/client-fetch";
-import { DataService } from "src/app/helpers/data.service";
-import { Client } from "src/app/helpers/client-data";
+import { ClientFetch } from "../../helpers/client-fetch";
+import { DataService } from "../../helpers/data.service";
+import { Client } from "../../helpers/client-data";
 
 import { MatDialog } from "@angular/material/dialog";
 import { DeleteClientComponent } from "./delete-client/delete-client.component";

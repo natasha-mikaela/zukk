@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { Client } from 'src/app/helpers/client-data';
-import { ClientFetch } from 'src/app/helpers/client-fetch';
-import { DataService } from 'src/app/helpers/data.service';
+import { Client } from '../../../helpers/client-data';
+import { ClientFetch } from '../../../helpers/client-fetch';
+import { DataService } from '../../../helpers/data.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { FormControl, FormGroup } from '@angular/forms';
 
