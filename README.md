@@ -32,8 +32,8 @@
 
 
 <!-- GETTING STARTED -->
-### Pre requisites
- Clone do repositorio
+### Pre requisitos
+ Clone do repositório
    ```sh
    git clone https://github.com/natasha-mikaela/zukk.git
    ```
