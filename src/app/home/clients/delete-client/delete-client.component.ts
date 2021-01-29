@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { DataService } from '../../helpers/data.service';
+import { DataService } from '../../../helpers/data.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { Client } from '../../helpers/client-data';
-import { ClientFetch } from '../../helpers/client-fetch';
+import { Client } from '../../../helpers/client-data';
+import { ClientFetch } from '../../../helpers/client-fetch';
 
 @Component({
   selector: 'app-delete-client',
